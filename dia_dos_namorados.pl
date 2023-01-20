@@ -132,8 +132,6 @@ algum_lugar_a_direita(X,Y,mesa(_,_,Y,X,_)).
 algum_lugar_a_direita(X,Y,mesa(_,_,Y,_,X)).
 algum_lugar_a_direita(X,Y,mesa(_,_,_,Y,X)).
 
-algum_lugar_a_esquerda(X,Y,Mesa) :-
-    algum_lugar_a_direita(Y,X,Mesa).
 
 exatamente_a_esquerda(X,Y,mesa(X,Y,_,_,_)).
 exatamente_a_esquerda(X,Y,mesa(_,X,Y,_,_)).
@@ -143,12 +141,7 @@ exatamente_a_esquerda(X,Y,mesa(_,_,_,X,Y)).
 exatamente_a_direita(X,Y,Mesa) :-
     exatamente_a_esquerda(Y,X,Mesa).
 
-entre_exatamente(X,Y,Z,mesa(Y,X,Z,_,_)).
-entre_exatamente(X,Y,Z,mesa(Z,X,Y,_,_)).
-entre_exatamente(X,Y,Z,mesa(_,Y,X,Z,_)).
-entre_exatamente(X,Y,Z,mesa(_,Z,X,Y,_)).
-entre_exatamente(X,Y,Z,mesa(_,_,Y,X,Z)).
-entre_exatamente(X,Y,Z,mesa(_,_,Z,X,Y)).
+
 
 entre_ordem(X,Y,Z,mesa(Y,X,Z,_,_)).
 entre_ordem(X,Y,Z,mesa(Y,X,_,Z,_)).
